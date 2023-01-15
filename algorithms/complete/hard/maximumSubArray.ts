@@ -20,33 +20,33 @@ list or array is also a valid sublist/subarray.
 
 // ------------ Kadane's Algorithm --------------
 
-// 1. Define the initial maxGlobal and maxCurrent values on the initial accumulator value for the reduce method.
-// Set to 0 if the given array is empty
+// 1. Define the initial maxGlobal, maxCurrent values on the initial accumulator value for the reduce method.
+// Set a custom iterator variuble (i) to start at index 1 on the initial accumulator object and update on each iteration
+// Set all values to 0 if the given array is empty
 
 // 2. On each iteration of the array, set the maxCurrent to the maximum value of the current maxCurrent and the
 // current value being visited.
 
 // 3. If the new maxCurrent is larger than the current maxGlobal, set the maxGlobal to the new maxCurrent value
 
-// 4. At the end of the iteration return the last value stored in maxGlobal
+// 4. At the end of the iteration, return the last value stored in maxGlobal
 
-export function maxSequence(arr: any) {
-  let maxGlobal = arr[0];
-  let maxCurrent = arr[0];
-
-  return arr.reduce((acc: any, curr: any) => {
-    maxCurrent = Math.max(curr, maxCurrent + curr);
-    if (maxCurrent > maxGlobal) maxGlobal = maxCurrent;
-    return maxGlobal;
-  });
-
-  for (let i = 1; i < arr.length; i++) {
-    maxCurrent = Math.max(arr[i], maxCurrent + arr[i]);
-    if (maxCurrent > maxGlobal) maxGlobal = maxCurrent;
-  }
-
-  return maxGlobal;
-}
+export const maxSequence = (arr: any) =>
+  arr.every((x: number) => x < 0)
+    ? 0
+    : arr.reduce(
+        (acc: any) => {
+          acc.maxCurrent = Math.max(arr[acc.i], acc.maxCurrent + arr[acc.i]);
+          if (acc.maxCurrent > acc.maxGlobal) acc.maxGlobal = acc.maxCurrent;
+          acc.i += 1;
+          return acc;
+        },
+        {
+          maxCurrent: arr[0] | 0,
+          maxGlobal: arr[0] | 0,
+          i: 1,
+        }
+      ).maxGlobal;
 
 // My brute force attempt ( Bad O(n²) )
 //
