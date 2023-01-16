@@ -1,7 +1,7 @@
 {
-  "name": "cs-tech-interviews",
+  "name": "cs-and-algorithms-env",
   "version": "1.0.0",
-  "description": "Environment for running algorithms and learning CS",
+  "description": "Environment for running algorithms and practicing CS concepts",
   "main": "index.ts",
   "scripts": {
     "start": "tsnd --respawn index.ts",
