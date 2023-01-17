@@ -1,7 +1,7 @@
 {
-  "name": "cs-and-algorithms-env",
+  "name": "algo-env",
   "version": "1.0.0",
-  "description": "Environment for running algorithms and practicing CS concepts",
+  "description": "Environment for running algorithms with TypeScript",
   "main": "index.ts",
   "scripts": {
     "compile": "npx tsc",
