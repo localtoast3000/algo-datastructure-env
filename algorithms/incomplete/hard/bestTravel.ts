@@ -24,8 +24,8 @@ DESCRIPTION:
 
       The sums of distances are then: 162, 163, 165, 165, 167, 168, 170, 172, 173, 175.
 
-      The biggest possible sum taking a limit of 174 into account is then 173 and the distances of the 3 corresponding 
-      towns is [55, 58, 60].
+      The biggest possible sum taking a limit of 174 into account is then 173 and the distances of the 3 
+      corresponding towns is [55, 58, 60].
 
       The function chooseBestSum (or choose_best_sum or ... depending on the language) will take as parameters 
       t (maximum sum of distances, integer >= 0), k (number of towns to visit, k >= 1) and ls 
@@ -39,7 +39,7 @@ DESCRIPTION:
 
       ts = [50, 55, 56, 57, 58] choose_best_sum(163, 3, ts) -> 163
 
-      xs = [50] choose_best_sum(163, 3, xs) -> nil (or null or ... or -1 (C++, C, D, Rust, Swift, Go, ...)
+      xs = [50] choose_best_sum(163, 3, xs) -> (or null or ... or -1 (C++, C, D, Rust, Swift, Go, ...)
 
       ys = [91, 74, 73, 85, 73, 81, 87] choose_best_sum(230, 3, ys) -> 228
 
@@ -50,36 +50,57 @@ DESCRIPTION:
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-      ( PEDAC approach )
+( PEDAC approach )
 
-      ------------------------------------
-      (P)roblem - Understand the problem
-      ------------------------------------
+------------------------------------
+(P)roblem - Understand the problem
+------------------------------------
 
-      Define the inputs and outputs of the algorithms function.
+Input: (
+      t: max travel distance = A number representing the maximum distance that can be traveled
+      k: towns to visit = A number representing the number of towns to visit
+      ls: list of distances = An array of numbers each representing distances between towns to visit
+)
+Output: (
+      The largest sum from the collection of distances that satisfies the problem eg. 
 
-      Input: Expected inputs
-      Output: Expected outputs 
+      t = 168 -> Target distance, cannot go greater
+      k = 3 -> Number of towns to visit
+      ls = [50,51,52,53,54,55,56,57,58,59,60] -> list of known distances between possible towns to visit
+      
+      Collections that satisfies the problem ==> [50,55,57],[50,55,58],[50,55,60]
+      
+      The sum of each collection ==> 162, 163, 165
+
+      The largest sum of the summed collections ==> 165
+
+      The function returns ==> 165 the largest sum that  the problem
+
+)
 
 
-      Refactor:
+Refactor:
+      1. With a given list of numbers (ls)
+      2. Find all the possible sequences containing only (k) numbers that when summed are <= the given target sum total (t)
+      3. Calculate the largest sum of all the sequences
+      4. Return the largest sum or "null" if the condition cannot be met
 
-      Re-write the description in a way that helps you understand the problem better.
 
 
 Rules:
-
-Identify the rules to solving the problem.
+      1.The calculations must be performed on a sequence containing exactly (k) numbers
+      2.The returned sum can not be larger than the target total sum (t)
+      3.The returned sum must be the largest of all summed sequencies smaller or equal to (t) 
 
 
 Q & A:
 
-Think of possible questions that could clarify the problem more
+Do all possible inputs only contain numbers ?
 
 
 Mental model: 
 
-Write out several ways you could possibly solve the problem. 
+1. 
 
 --------------------------
 (E)xamples 
