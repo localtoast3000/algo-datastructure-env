@@ -35,6 +35,7 @@ module.exports = {
       __dirname,
       '..',
       '..',
+      '..',
       'algorithms',
       'incomplete'
     );
@@ -43,7 +44,7 @@ module.exports = {
       ? `${toCamelCase(templateVars.title)}.ts`
       : `algo-${uid(8)}.ts`;
 
-    switch (templateVars.difficulty) {
+    switch (templateVars.difficulty.toLowerCase()) {
       case 'custom':
         handleFileCreate(incompleteAlgosPath, 'custom', filename, template);
         break;
@@ -70,14 +71,14 @@ process.on(
 function handleFileCreate(incompleteAlgosPath, current, filename, template) {
   if (fs.existsSync(path.join(incompleteAlgosPath, current, filename)))
     fs.writeFileSync(
-      path.join(incompleteAlgosPath, `${filename.split('.ts')[0]}-${uid(8)}.ts`),
-      JSON.stringify(template),
+      path.join(incompleteAlgosPath, current, `${filename.split('.ts')[0]}-${uid(8)}.ts`),
+      template,
       errorHandler
     );
   else
     fs.writeFileSync(
       path.join(incompleteAlgosPath, current, filename),
-      JSON.stringify(template),
+      template,
       errorHandler
     );
 }
