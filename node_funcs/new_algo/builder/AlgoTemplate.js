@@ -84,5 +84,8 @@ function handleFileCreate(incompleteAlgosPath, current, filename, template) {
 }
 
 function toCamelCase(str) {
-  return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase());
+  return str
+    .toLowerCase()
+    .replace(/[^a-zA-Z0-9/w/]+(.)/g, (_, chr) => chr.toUpperCase())
+    .replace(/[\s\W_*]/g, '');
 }
