@@ -4,13 +4,18 @@
   "description": "Environment for running algorithms and practicing CS concepts",
   "main": "index.ts",
   "scripts": {
+    "compile": "npx tsc",
     "start": "tsnd --respawn index.ts",
     "algo": "tsnd --respawn algorithms/algo.ts",
+    "new-algo": "node ./node_funcs/new_algo/newAlgo.js",
     "data-s": "tsnd --respawn data_structures/data-s.ts"
   },
   "author": "Craig Chick",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "uid2": "^1.0.0"
+  },
   "devDependencies": {
     "@types/node": "^18.11.18",
     "ts-node": "^10.9.1",
