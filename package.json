@@ -7,7 +7,7 @@
     "compile": "npx tsc",
     "start": "tsnd --respawn index.ts",
     "algo": "tsnd --respawn algorithms/algo.ts",
-    "new-algo": "node ./node_funcs/new_algo/newAlgo.js",
+    "new-algo": "node ./lib/new_algo/newAlgo.js",
     "data-s": "tsnd --respawn data_structures/data-s.ts"
   },
   "author": "Craig Chick",
