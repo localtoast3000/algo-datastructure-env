@@ -98,18 +98,11 @@ Q & A:
 Do all possible inputs only contain numbers ?
 
 
-Mental model: 
-
-1. 
-
 --------------------------
 (E)xamples 
 --------------------------
 
-Write some examples and the results that would be expected from them.
-Here you can think about and define the edge cases.
-
-(arg1) ==> true
+(t:174, k:3, ls:[50, 55, 57, 58, 60, 1, 2, 3, 4, 5]) ==> 173
 (arg2) ==> false
 (arg3) ==> true
 
@@ -117,29 +110,20 @@ Here you can think about and define the edge cases.
 (D)ata
 --------------------------
 
-Describe the data structures that you will be using to solve the problem
-
- Arrays / Variables: Values and thier types
- Objects / HashTables: Define keys and values with thier types
-
-(eg.): Hash table to map each character of an input string to each key of the table and store it's occurrences as the value
-     
-      hash_table = { 
-            [character]: occurrences in string == type Number
-            ...
-      }
+t:number
+k:number
+ls:string[]
 
 --------------------------
 (A)lgorithm
 --------------------------
 
-Write out the algorithm in human language.
+1. Define a biggestSum variable and set it to 0
+1. Start at index 1 of (ls) array and loop through the rest building all possible sequences of length (k)
+2. On each iteration move to the next index and do the same as step 1, continue until loop ends
+3. Every time a new sequence is made calculate its total, if it is bigger than biggestSum then set it as its new value
+4. Reuturn biggestSum
 
-1. Step 1
-
-2. Step2
-
-...
 
 --------------------------
 (C)ode
@@ -152,11 +136,13 @@ Finally, write the algorithm in code and test with many end cases before submitt
 
 */
 
+import { lstat } from 'fs';
+
 function chooseBestSum(t: any, k: any, ls: any) {
-  return ls;
+  return ls.map((x: number) => x);
 }
 
-console.log(chooseBestSum(163, 3, [50, 55, 56, 57, 58])); // ==> 163
+console.log(chooseBestSum(174, 3, [50, 55, 57, 58, 60])); // ==> 163
 
 /* 
 
