@@ -28,7 +28,7 @@ export function multiplicationTable(size: number) {
   return table;
 }
 
-// Double loop for O(n²) complexity
+// Nested loop for O(n²) complexity
 // Execution time of Multiplication table: 4.179726399898529 seconds
 // export function multiplicationTable(size: number) {
 //   const table: number[][] = [];
