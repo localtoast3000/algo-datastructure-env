@@ -5,6 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "compile": "npx tsc",
+    "js-start": "nodemon main.js",
     "start": "tsnd --respawn index.ts",
     "algo": "tsnd --respawn algorithms/algo.ts",
     "new-algo": "node ./lib/new_algo/newAlgo.js",

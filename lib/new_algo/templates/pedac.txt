@@ -1,112 +1,96 @@
 /*
-
+========================================================================
 TITLE: <%>title</%>
 PLATFORM: <%>platform</%>
 DIFFICULTY: <%>difficulty</%>
-DESCRIPTION:
+========================================================================
 
+DESCRIPTION:
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     Paste algorithm description here ....
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  
 
-( PEDAC approach )
+(PEDAC approach)
 
-------------------------------------
+------------------------------------------------
 (P)roblem - Understand the problem
-------------------------------------
+------------------------------------------------
 
-Define the inputs and outputs of the algorithms function.
+1. Define the inputs and outputs of the algorithm's function.
 
-Input: Expected inputs
-Output: Expected outputs 
+  - Input: Expected inputs
+  - Output: Expected outputs 
 
+2. Refactor:
 
-Refactor:
+  - Re-write the description in a way that helps you understand the problem better.
 
-Re-write the description in a way that helps you understand the problem better.
+3. Rules:
 
+  - Identify the rules to solving the problem.
 
-Rules:
+4. Q & A:
 
-Identify the rules to solving the problem.
+  - Think of possible questions that could clarify the problem more.
 
+5. Mental Model:
 
-Q & A:
+  - Write out several ways you could possibly solve the problem. 
 
-Think of possible questions that could clarify the problem more
-
-
-Mental model: 
-
-Write out several ways you could possibly solve the problem. 
-
---------------------------
+------------------------------------------------
 (E)xamples 
---------------------------
+------------------------------------------------
 
-Write some examples and the results that would be expected from them.
+Write some examples and the expected results from them.
 Here you can think about and define the edge cases.
 
-(arg1) ==> true
-(arg2) ==> false
-(arg3) ==> true
+  - Example 1: (arg1) ==> true
+  - Example 2: (arg2) ==> false
+  - Example 3: (arg3) ==> true
 
---------------------------
-(D)ata
---------------------------
+------------------------------------------------
+(D)ata Structures
+------------------------------------------------
 
-Describe the data structures that you will be using to solve the problem
+Describe the data structures that you will be using to solve the problem.
 
- Arrays / Variables: Values and thier types
- Objects / HashTables: Define keys and values with thier types
+  - Arrays / Variables: Values and their types
+  - Objects / HashTables: Define keys and values with their types
 
-(eg.): Hash table to map each character of an input string to each key of the table and store it's occurrences as the value
-     
-      hash_table = { 
-            [character]: occurrences in string == type Number
-            ...
-      }
+  (e.g.):
+    Hash table to map each character of an input string to its occurrences as values.
 
---------------------------
+    hash_table = { 
+          [character]: occurrences in string // Type: Number
+          ...
+    }
+
+------------------------------------------------
 (A)lgorithm
---------------------------
+------------------------------------------------
 
-Write out the algorithm in human language.
+Write out the algorithm in human-readable language.
 
-1. Step 1
+  1. Step 1
+  2. Step 2
+  ...
 
-2. Step2
-
-...
-
---------------------------
+------------------------------------------------
 (C)ode
---------------------------
+------------------------------------------------
 
-Finally, write the algorithm in code and test with many end cases before submitting
-
-
-1. Brute force attempt -- Don't think about the complexity yet, just write a working algorithm
+1. Brute force attempt -- Don't think about the complexity yet, just write a working algorithm.
 
 */
 
-
-
-
 // Add function here
-
-
-
 
 /* 
 
-2. Refactor and optimise -- Once you have a working algorithm, can you refactor it and optimise
-                            for time and space complexity ( Big O Complexity ) ?
+2. Refactor and optimize -- Once you have a working algorithm, can you refactor it and optimize for time and space complexity (Big O Complexity)?
+
 */
 
-
-
-
-// Add function here
+// Add refactored function here
