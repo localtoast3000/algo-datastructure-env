@@ -1,4 +1,4 @@
 import test from '@lib/test';
-import { bitCounting } from './algorithms/incomplete/easy/bitCounting';
+import { stringToHashSymbolString } from 'codin-games/asciiArt';
 
-test.unit(bitCounting, [{ args: [10], expected: 2 }]);
+console.log(stringToHashSymbolString('ABCD'));
